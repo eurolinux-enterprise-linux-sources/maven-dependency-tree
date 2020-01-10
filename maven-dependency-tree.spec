@@ -1,7 +1,7 @@
 
 Name:          maven-dependency-tree
 Version:       2.0
-Release:       6%{?dist}
+Release:       7%{?dist}
 Summary:       Maven dependency tree artifact
 Group:         Development/Libraries
 License:       ASL 2.0
@@ -10,6 +10,7 @@ Source0:       http://repo1.maven.org/maven2/org/apache/maven/shared/%{name}/%{v
 BuildArch:     noarch
 
 BuildRequires: maven-local
+BuildRequires: maven-shared
 BuildRequires: plexus-containers-component-metadata
 BuildRequires: plexus-containers-component-annotations
 
@@ -45,6 +46,14 @@ This package contains javadoc for %{name}.
 %doc LICENSE NOTICE
 
 %changelog
+* Wed Aug 05 2015 Scientific Linux Auto Patch Process <SCIENTIFIC-LINUX-DEVEL@LISTSERV.FNAL.GOV>
+- Eliminated rpmbuild "bogus date" error due to inconsistent weekday,
+  by assuming the date is correct and changing the weekday.
+
+* Wed Jul 30 2014 Mikolaj Izdebski <mizdebsk@redhat.com> - 2.0-7
+- Add missing build requires on maven-shared
+- Resolves: rhbz#1074927
+
 * Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.0-6
 - Mass rebuild 2013-12-27
 
