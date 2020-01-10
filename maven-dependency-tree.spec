@@ -1,7 +1,7 @@
 
 Name:          maven-dependency-tree
 Version:       2.0
-Release:       5%{?dist}
+Release:       6%{?dist}
 Summary:       Maven dependency tree artifact
 Group:         Development/Libraries
 License:       ASL 2.0
@@ -45,6 +45,9 @@ This package contains javadoc for %{name}.
 %doc LICENSE NOTICE
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.0-6
+- Mass rebuild 2013-12-27
+
 * Fri Jun 28 2013 Mikolaj Izdebski <mizdebsk@redhat.com> - 2.0-5
 - Rebuild to regenerate API documentation
 - Resolves: CVE-2013-1571
